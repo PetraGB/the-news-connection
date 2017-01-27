@@ -1,0 +1,121 @@
+<html>
+  <head>
+    <title>Prototype</title>
+  <head>
+
+  <script src="lib/jquery310.js"></script>
+  <script src="lib/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+  <script src="lib/p5.js"></script>
+  <script src="articles.js"></script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" href="lib/jquery-ui-1.12.1.custom/jquery-ui.min.css">
+  <body>
+    <div id="header">
+        <form class="menu" action="./index.html">
+            <input type="submit" value="Home" />
+        </form>
+
+        <button class="menu" onclick="    $('#dialog').dialog(
+                {
+                    width: $('body').width() * 0.8,
+                    height: displayHeight * 0.8
+                }
+            );">My readings</button>
+      <h1>The News Connection</h1>
+      <div id="searchbox">
+          <input></input>
+          <a id="searchicon" href="#">
+              <div ></div>
+          </a>
+      </div>
+    </div>
+
+
+    <div id="wrap">
+
+    <div id="historyWrap">
+        <div id="readTitle">
+          Read Articles
+        </div>
+      <div id="history">
+        <h2>History</h2>
+        <a href="#" id="toggleHistoryLink">
+            <div id="toggleHistoryButton">
+            </div>
+        </a>
+
+        <div id="historyList2">
+          <a href="#" style="text-decoration:none" class="historybox_link">
+            <div class="historybox">
+              <div class="historybox_title">
+                APatra has
+              </div>
+            </div>
+          </a>
+        <ul id="historyList">
+        </ul>
+      </div>
+      <div id="history_save">
+        <a href="#" style="text-decoration:none" >
+          Save
+        </a>
+      </div>
+      <div id="history_clear">
+        <a href="./index.html" onclick="clearHistory();" style="text-decoration:none" >
+          Clear history
+        </a> 
+      </div>
+    </div>
+    </div>
+
+    <div id="articleContainer">
+      <div id="title">
+        Hallo title
+      </div>
+      <div id="content">
+        Bla bli blub I'm an article
+      </div>
+
+      <div id="linkContainer">
+        <h2 id="linkTitle">Connected pieces</h2>
+        <div id="relationText">
+            Relation
+        </div>
+        <a href="#" style="text-decoration:none" class="linkbox_link">
+          <div class="linkbox">
+            <div class="linkbox_title">
+              Article title
+            </div>
+
+            <div class="linkbox_description">
+              Article description Article description Article description
+            </div>
+
+            <div class="linkbox_icon">
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div id="filterLinks">
+        <h2 id="linkTitle">Filters</h2>
+          <a href="#" id="all" class="filter_link">All</a>
+          <a href="#" id="read" class="filter_link">Read</a>
+          <a href="#" id="unread" class="filter_link">Unread</a>
+          <a href="#" id="similar.png" class="filter_link">Similar</a>
+          <a href="#" id="opposite.png" class="filter_link">Opposite</a>
+          <a href="#" id="details.png" class="filter_link">Detailed</a>
+          <a href="#" id="broader.png" class="filter_link">Broader View</a>
+          <a href="#" id="effect.png" class="filter_link">Effect</a>
+          <a href="#" id="cause.png" class="filter_link">Cause</a>
+      </div>
+    </div>
+    </div>
+    <div id="dialog" style="display:none" title="My readings">
+        <img src="history.jpg"></img>
+    </div>
+  </body>
+
+
+</html>
